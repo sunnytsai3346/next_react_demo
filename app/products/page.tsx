@@ -1,6 +1,9 @@
-"use client";
+'use client';
+import styles from "./page.module.css"
+
+
 import React, { Component, useEffect, useState } from "react";
-import AddProductButton from "./AddProductButton";
+import Link from "next/link";
 
 type Product = {
   id: string;
@@ -24,11 +27,11 @@ export default function ProductList() {
   }, []);
 
   return (
-    <div className="overflow-x-auto">
-      <h2>It is {new Date().toLocaleTimeString()}.</h2>
+    <div className={styles.card1}>
+      
       <h1>Product List</h1>
       <table className="table">
-        <thead className="font-bold">
+        <thead >
           <th>Id</th>
           <th>Name</th>
           <th>Description</th>
@@ -48,7 +51,11 @@ export default function ProductList() {
         </tbody>
       </table>
       <div className="p-10">
-        <AddProductButton />
+        <Link href="./addProduct">
+          <button className="inline-block cursor-pointer rounded-md bg-gray-800 px-4 py-3 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-gray-900">
+            Add Product
+          </button>
+        </Link>
       </div>
     </div>
   );

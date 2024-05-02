@@ -2,7 +2,7 @@
     padding: 1rem;
     border: 1px solid #ccc;
     width:100%;
-    background-color: #ddd;    
+    
 
 }
 .card1 h1
@@ -10,4 +10,10 @@
     font-size: 30pt;
     font-weight: 700;
 
+}
+.card1 th
+{
+    font-size:15pt;
+    font-weight:700;
+    background-color: #ccc;    
 }
